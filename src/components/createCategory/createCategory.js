@@ -48,7 +48,8 @@ class CreateCategory extends Component {
     e.preventDefault();
     let category = {
       name: this.state.name,
-      description: this.state.description
+      description: this.state.description,
+      rooms:this.state.selectedRooms
     };
     console.log('DATA TO SEND', category)
     axios.post('http://localhost:9097/category/create', category)
